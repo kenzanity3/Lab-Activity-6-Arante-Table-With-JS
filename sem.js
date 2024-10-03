@@ -494,7 +494,7 @@ function SemesterTable(data) {
           <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${DecimalPlaces(course.unit,1)}</td>
           <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${course.grade != "0" ? DecimalPlaces(course.grade,2) : ''}</td>
           <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${course.remark}</td>
-          <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${course.remark == "PASSED" ? course.course: ''}</td>
+          <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${course.remark = "PASSED" ? course.course: ''}</td>
           <td class = ${course.remark == 'PASSED' ? "table-success" : (course.remark == 'In progress' ? "table-warning" : "table-light")}>${course.Term != '' ? (semester.semlevel[1] == 1 ? 'First' : (semester.semlevel[1] == 2 ? 'Second' : '')) : ''} ${course.Term != '' ? 'Semester A.Y '+course.Term : ''}</td>
         `;
       });
